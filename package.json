@@ -1,0 +1,33 @@
+{
+  "name": "web-container",
+  "version": "0.0.0",
+  "description": "web-container features",
+  "homepage": "https://imafee.github.io/web-container",
+  "bugs": {
+    "url": "https://github.com/imafee/web-container/issues",
+    "email": "imafee@outlook.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "imafee",
+    "email": "imafee@outlook.com",
+    "url": "https://imafee.github.io/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:imafee/web-container.git"
+  },
+  "config": {
+    "repo-url": "//github.com/imafee/web-container"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.31"
+  }
+}
