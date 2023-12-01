@@ -4,11 +4,13 @@ The web containers' feature：
 
 - chrome
 - nodejs
-- bun
 - webAssembly
+- bun
 
 ## doc dir
 
+- WebApi 标准规范
+  - <specific>
 - browser
   - architecture
   - flow
@@ -16,8 +18,6 @@ The web containers' feature：
   - architecture
   - flow
 - bun
-- WebApi 标准规范
-  - <specific>
 
 ## TAGS
 
