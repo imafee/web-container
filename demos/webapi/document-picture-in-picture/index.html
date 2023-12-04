@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1>document-picture-in-picture</h1>
+    <pre>
+      实验目标：api\event实践
+      实验设计：
+        - 主窗口页面，open和close来控制pip窗口的开启和关闭
+        - pip窗口页面，close和原生窗口关闭按钮控制自身的关闭
+      结果：
+        - const {window:pip} = window.documentPictureInPicture 窗口中都存在window变量，pip也不例外
+        - 如果pip===null表示当前没有画中画，否则就有
+        - pip.document.appendChild(element) 往画中画中插入任何元素
+    </pre>
+    <button id="btn_open">open pip</button>
+    <button id="btn_close">close pip</button>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

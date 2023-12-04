@@ -1,15 +1,4 @@
-# WebApi 协议归类
-
-## 浏览器的视窗管理（browser window frame）
-
-- Fullscreen API，将网页置于全屏模式。它可以用于游戏和演示文稿。
-- Visual Viewport,提供了关于浏览器可视区域的信息。它可用于调整网页内容的布局以适应各种屏幕尺寸和分辨率。
-- Page Visibility API,用于检测网页是否可见。它可以用来停止播放视频或暂停定时器等，以节省 CPU 和内存资源。
-- Picture-in-Picture API,允许视频在一个小窗口中继续播放，即使网页被最小化或切换到另一个标签页。
-- Popover API,用于创建弹出菜单。它可以用于显示额外的信息或操作选项。
-- Presentation API Experimental,允许将网页内容投影到外部显示器上。这对于演示文稿或会议非常有用。
-- Window Controls Overlay API Experimental,允许开发者在网页上显示自定义的窗口控件，例如关闭、最小化、最大化按钮等。这对于创建跨平台的桌面应用程序非常有用。
-- Window Management API Experimental,提供了管理浏览器窗口的功能。它可以用来改变窗口的位置、大小、状态等属性。
+# WebApi 协议归类 TODO
 
 ## 浏览器的导航和视区（navigation view ）
 
@@ -135,7 +124,7 @@ Web Storage API,在本地存储少量的数据，并且具有更好的性能和�
 ---- 流媒体处理 stream media--------
 
 - Audio Output Devices API Experimental，访问音频设备，例如扬声器和耳机，并控制音量、静音等功能。
-- Document Picture-in-Picture API Experimental，将视频放入画中画模式，使用户可以在浏览网页的同时观看视频。
+
 - Encrypted Media Extensions，解密加密的媒体文件，并将其提供给 HTML5 video 元素。它可以用于在线视频流应用和 DRM 保护的应用。
 - EyeDropper API Experimental，从屏幕上拾取颜色。它可以用于制作色彩编辑器或图片处理应用。
 - Media Capabilities API，获取和检查硬件设备的能力，例如屏幕尺寸和方向、摄像头和麦克风可用性等。它可以用于动态调整网页内容和 UI。

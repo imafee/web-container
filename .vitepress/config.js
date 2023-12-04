@@ -11,6 +11,17 @@ export default defineConfig({
   srcDir: "./docs",
   assetsDir: "static",
   cleanUrls: true,
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "./assets/favicon-16x16.png",
+      },
+    ],
+  ],
   // https://vitepress.dev/reference/default-theme-config
   themeConfig: {
     nav: [{ text: "Home", link: "/" }],

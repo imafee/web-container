@@ -1,41 +1,36 @@
 # Fullscreen API
 
-在全屏模式下呈现特定元素（及其子元素）。所谓全屏模式是指元素的渲染依据视窗(viewport)的位置和边界。
+在全屏模式下显示指定的 html 元素（及其子元素）。  
+全屏模式是指在视窗(viewport)边界之内显示元素的样子，退出后元素恢复到原来的样子。
 
-![caniuse.com](https://caniuse.bitsofco.de/image/fullscreen.jpg)
+## 接口
 
-## Interface
+没有
 
-Fullscreen API 没有自己的接口。相反，它扩展了其他几个接口，以添加提供全屏功能所需的方法、属性和事件。
+## 对其他接口的扩展
 
-## Instance
-
-### Properties
+属性
 
 ```js
-Document.fullscreen (废弃!)
 // 查询全屏模式显示的元素（只读）
-Document.fullscreenElement // 有则返回Element，没有则返回null
+Document.fullscreenElement; // Element|null
 // 查询全屏模式是否可用（只读）
-Document.fullscreenEnabled // Boolean类型
+Document.fullscreenEnabled; // Boolean
 ```
 
-### Methods
-
-返回的 promise 的状态即动作的执行结果。
+方法
 
 ```js
-Document.exitFullscreen(); // Promise
+// 元素进入全屏模式
 Element.requestFullscreen(); // Promise
+// 退出全屏模式
+Document.exitFullscreen(); // Promise
 ```
 
-### Events
-
-change 的含义：进入和退出全屏模式都将触发事件
-
-事件的触发顺序：element 在前，document 在后
+事件：进入和退出全屏模式都将触发
 
 ```js
+// 事件的触发顺序：element 在前，document 在后
 Document: fullscreenchange;
 Document: fullscreenerror;
 Element: fullscreenchange;
@@ -44,17 +39,21 @@ Element: fullscreenerror;
 
 ## Exercises
 
-1.  练习：页面中的元素使用 api `/demos/webapi/fullscreen/api/index.html`
+- `/demos/webapi/fullscreen/api/index.html`
 
-    - 验证了 fullscreenchange 事件的先后顺序，element 在前 document 在后
+  - api 的使用
+  - fullscreenchange 事件的触发顺序，element 在前 document 在后
 
-1.  练习：被 iframe 加载的页面，该页面中的元素使用 api `/demos/webapi/fullscreen/position/index.html`
-
-    - 理解了全屏模式的含义：进入全屏模式的该元素与主页面的元素进行比较，发现表现是一致的。即元素的位置、大小都是参考视窗(viewport)而不是 iframe 元素的，层级所有在 html 元素之上(alert 之下)的表现形式。
+- `/demos/webapi/fullscreen/position/index.html`
+  - 若元素所在页面被 iframe 加载，该元素使用 api
+  - 理解了全屏模式的含义：进入全屏模式的元素，无所谓是在主页面还是在被 iframe 加载的页面里，表现是一致的。即全屏表现是参考视窗(viewport)而不是 iframe 元素的，全屏的层级在所有 html 元素之上 alert 之下的表现形式。
 
 ## Reference
 
 关键词: `[browser、client、ui、viewport]`
+
+浏览器兼容性: [caniuse](https://caniuse.com/fullscreen)
+![caniuse.com](https://caniuse.bitsofco.de/image/fullscreen.jpg)
 
 相关参考：
 
